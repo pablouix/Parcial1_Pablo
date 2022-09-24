@@ -10,7 +10,13 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import edu.ucne.parcial1_pablo.ui.entidaddementira.EntidadMentiraScreen
+import edu.ucne.parcial1_pablo.ui.entidaddementira_list.EntidadMentiraScreenList
 import edu.ucne.parcial1_pablo.ui.theme.Parcial1_PabloTheme
+import edu.ucne.parcial1_pablo.util.Screen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,22 +28,26 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+
+                    val navController = rememberNavController()
+
+                    NavHost(
+                        navController = navController,
+                        startDestination = Screen.EntidadMentiraScreenList.route
+                    ){
+                        composable(Screen.EntidadMentiraScreenList.route){
+                            EntidadMentiraScreenList(onClick = { navController.navigate(Screen.EntidadMentiraScreen.route) })
+                        }
+
+                        composable(Screen.EntidadMentiraScreen.route){
+                            EntidadMentiraScreen({navController.navigateUp()})
+                        }
+
+                    }
+
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    Parcial1_PabloTheme {
-        Greeting("Android")
-    }
-}
