@@ -4,6 +4,7 @@
     package="edu.ucne.parcial1_pablo">
 
     <application
+        android:name=".ExamenApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
