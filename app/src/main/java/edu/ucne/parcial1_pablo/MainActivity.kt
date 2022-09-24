@@ -13,11 +13,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import dagger.hilt.android.AndroidEntryPoint
 import edu.ucne.parcial1_pablo.ui.entidaddementira.EntidadMentiraScreen
 import edu.ucne.parcial1_pablo.ui.entidaddementira_list.EntidadMentiraScreenList
 import edu.ucne.parcial1_pablo.ui.theme.Parcial1_PabloTheme
 import edu.ucne.parcial1_pablo.util.Screen
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
