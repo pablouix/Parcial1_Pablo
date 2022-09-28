@@ -9,9 +9,14 @@ class ArticulosRepositorio @Inject constructor(
 ){
 
     suspend fun insert(articulo: Articulo){
-
+        dataBase.articulosDao.insert(articulo)
     }
 
+    suspend fun delete(articulo: Articulo){
+        dataBase.articulosDao.delete(articulo)
+    }
 
+    fun getAll() = dataBase.articulosDao.getAll()
 
+    fun getFind(id: Int ) = dataBase.articulosDao.getFind(id)
 }
