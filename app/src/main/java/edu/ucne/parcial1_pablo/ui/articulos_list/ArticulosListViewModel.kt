@@ -19,7 +19,7 @@ data class EntidadMentiraUiState(
 
 
 @HiltViewModel
-class EntidadMentiraListViewModel @Inject constructor(
+class ArticulosListViewModel @Inject constructor(
     val repositorio: ArticulosRepositorio
 ) : ViewModel(){
 

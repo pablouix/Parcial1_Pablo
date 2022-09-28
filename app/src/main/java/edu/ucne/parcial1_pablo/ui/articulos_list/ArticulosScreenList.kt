@@ -20,7 +20,7 @@ import edu.ucne.parcial1_pablo.data.entity.Articulo
 @Composable
 fun EntidadMentiraScreenList(
     onClick: () -> Unit,
-    viewModel: EntidadMentiraListViewModel = hiltViewModel()
+    viewModel: ArticulosListViewModel = hiltViewModel()
 )
 {
     val uiState by viewModel.uiState.collectAsState()
