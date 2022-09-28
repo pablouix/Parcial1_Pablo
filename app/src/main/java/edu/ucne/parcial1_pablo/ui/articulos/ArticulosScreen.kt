@@ -1,4 +1,4 @@
-package edu.ucne.parcial1_pablo.ui.entidaddementira
+package edu.ucne.parcial1_pablo.ui.articulos
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth

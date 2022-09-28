@@ -1,4 +1,4 @@
-package edu.ucne.parcial1_pablo.ui.entidaddementira_list
+package edu.ucne.parcial1_pablo.ui.articulos_list
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

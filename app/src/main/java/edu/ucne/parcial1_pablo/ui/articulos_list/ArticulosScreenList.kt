@@ -1,4 +1,4 @@
-package edu.ucne.parcial1_pablo.ui.entidaddementira_list
+package edu.ucne.parcial1_pablo.ui.articulos_list
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
