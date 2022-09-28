@@ -13,6 +13,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import edu.ucne.parcial1_pablo.data.entity.Articulo
 
@@ -26,7 +27,19 @@ fun ArticulosScreenList(
     val uiState by viewModel.uiState.collectAsState()
 
     Column(modifier = Modifier.padding(10.dp)) {
-        Text(text = "Lista de Articulos")
+        Text(
+            text = "Lista de Articulos",
+            fontSize = 18.sp,
+            modifier = Modifier.padding(0.dp,5.dp)
+        )
+        Divider(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(top = 0.dp),
+            color = Color.Blue
+        )
+
+        Spacer(modifier = Modifier.padding(6.dp))
 
         EntidadMentiraList(
             articulo = uiState.entidadmentira,
