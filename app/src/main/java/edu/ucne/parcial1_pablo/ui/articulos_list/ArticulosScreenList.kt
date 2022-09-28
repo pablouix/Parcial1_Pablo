@@ -16,6 +16,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import edu.ucne.parcial1_pablo.data.entity.Articulo
+import edu.ucne.parcial1_pablo.ui.articulos.ArticulosViewModel
 
 
 @Composable
@@ -70,7 +71,7 @@ fun EntidadMentiraList(
 }
 
 @Composable
-fun EntidadDeMentiraRow(articulo: Articulo){
+fun EntidadDeMentiraRow(articulo: Articulo, viewModel: ArticulosViewModel = hiltViewModel()){
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -96,6 +97,10 @@ fun EntidadDeMentiraRow(articulo: Articulo){
             ) {
                 Text(text = "Marca: ${articulo.marca}")
                 Text(text = "Existencia: ${articulo.existencia}")
+            }
+
+            Button(onClick = {viewModel.Delete(articulo)}) {
+                Text(text = "Eliminar")
             }
 
         }
