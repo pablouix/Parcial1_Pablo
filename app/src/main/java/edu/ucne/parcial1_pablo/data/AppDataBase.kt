@@ -6,7 +6,7 @@ import edu.ucne.parcial1_pablo.data.entity.EntidadDeMentira
 
 @Database(
     entities = [EntidadDeMentira::class],
-    version = 1
+    version = 2
 )
 
 abstract class AppDataBase : RoomDatabase(){
