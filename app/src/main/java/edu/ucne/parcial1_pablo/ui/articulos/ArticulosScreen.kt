@@ -16,7 +16,7 @@ import androidx.core.text.isDigitsOnly
 import androidx.hilt.navigation.compose.hiltViewModel
 
 @Composable
-fun EntidadMentiraScreen(
+fun ArticulosScreen(
     onNavigateBack: () -> Unit,
     viewModel: ArticulosViewModel = hiltViewModel()
 ){
@@ -119,6 +119,6 @@ fun EntidadMentiraScreen(
 @Preview(showSystemUi = true)
 fun Preview() {
 
-    EntidadMentiraScreen({ })
+    ArticulosScreen({ })
 
 }

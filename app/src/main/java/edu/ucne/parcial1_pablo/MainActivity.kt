@@ -11,7 +11,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
-import edu.ucne.parcial1_pablo.ui.articulos.EntidadMentiraScreen
+import edu.ucne.parcial1_pablo.ui.articulos.ArticulosScreen
 import edu.ucne.parcial1_pablo.ui.articulos_list.EntidadMentiraScreenList
 import edu.ucne.parcial1_pablo.ui.theme.Parcial1_PabloTheme
 import edu.ucne.parcial1_pablo.util.Screen
@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
                         }
 
                         composable(Screen.EntidadMentiraScreen.route){
-                            EntidadMentiraScreen({navController.navigateUp()})
+                            ArticulosScreen({navController.navigateUp()})
                         }
 
                     }
