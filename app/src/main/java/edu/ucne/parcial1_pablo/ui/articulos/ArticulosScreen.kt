@@ -107,7 +107,7 @@ fun ArticulosScreen(
                 else if(viewModel.marca.isBlank())
                     errorMarca = viewModel.marca.isBlank()
 
-                if(viewModel.existencia.isBlank())
+                else if(viewModel.existencia.isBlank())
                     errorExistencia = viewModel.existencia.isBlank()
 
                 else if(viewModel.existencia.toDouble()<=0)
