@@ -18,7 +18,7 @@ import edu.ucne.parcial1_pablo.data.entity.Articulo
 
 
 @Composable
-fun EntidadMentiraScreenList(
+fun ArticulosScreenList(
     onClick: () -> Unit,
     viewModel: ArticulosListViewModel = hiltViewModel()
 )
