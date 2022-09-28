@@ -25,12 +25,12 @@ fun ArticulosScreenList(
 {
     val uiState by viewModel.uiState.collectAsState()
 
-    Column(modifier = Modifier.padding(8.dp)) {
-        Text(text = "Lista")
+    Column(modifier = Modifier.padding(10.dp)) {
+        Text(text = "Lista de Articulos")
 
         EntidadMentiraList(
             articulo = uiState.entidadmentira,
-            modifier = Modifier.padding(8.dp)
+            modifier = Modifier.padding(0.dp)
 
         )
         Button(
@@ -61,20 +61,32 @@ fun EntidadDeMentiraRow(articulo: Articulo){
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(4.dp)
     ) {
-        Text(
-            text = ""+articulo.articuloId,
-            style = MaterialTheme.typography.caption
-        )
 
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
-            Text(text = ""+articulo.descripcion)
-            Text(text = "Valor ${articulo.existencia}")
+
+        Column() {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text(
+                    text = "${articulo.articuloId}",
+                    //style = MaterialTheme.typography.caption
+                )
+                Text(text = "Descripcion: ${articulo.descripcion}")
+
+
+            }
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text(text = "Marca: ${articulo.marca}")
+                Text(text = "Existencia: ${articulo.existencia}")
+            }
+
         }
+
 
         Divider(
             modifier = Modifier
