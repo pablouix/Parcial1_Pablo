@@ -106,10 +106,15 @@ fun ArticulosScreen(
                     errorDescripcion = viewModel.descripcion.isBlank()
                 else if(viewModel.marca.isBlank())
                     errorMarca = viewModel.marca.isBlank()
-                else if(viewModel.existencia.toDouble()>=0)
-                    errorExistencia = viewModel.existencia.toDouble()>=0
-                else if(viewModel.existencia.isDigitsOnly())
-                    errorExistencia = viewModel.existencia.isDigitsOnly()
+
+                if(viewModel.existencia.isBlank())
+                    errorExistencia = viewModel.existencia.isBlank()
+
+                else if(viewModel.existencia.toDouble()<=0)
+                    errorExistencia = viewModel.existencia.toDouble()<=0
+
+                //else if(viewModel.existencia.isDigitsOnly())
+                  //  errorExistencia = viewModel.existencia.isDigitsOnly()
                 else
                 {
                     viewModel.Save()
