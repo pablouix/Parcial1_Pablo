@@ -14,7 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
-import edu.ucne.parcial1_pablo.data.entity.EntidadDeMentira
+import edu.ucne.parcial1_pablo.data.entity.Articulo
 
 
 @Composable
@@ -29,7 +29,7 @@ fun EntidadMentiraScreenList(
         Text(text = "Lista")
 
         EntidadMentiraList(
-            entidadDeMentira = uiState.entidadmentira,
+            articulo = uiState.entidadmentira,
             modifier = Modifier.padding(8.dp)
 
         )
@@ -46,25 +46,25 @@ fun EntidadMentiraScreenList(
 
 @Composable
 fun EntidadMentiraList(
-    entidadDeMentira: List<EntidadDeMentira>,
+    articulo: List<Articulo>,
     modifier: Modifier = Modifier
 ){
     LazyColumn(modifier = modifier){
-        items(entidadDeMentira){ entidadDeMentir ->
+        items(articulo){ entidadDeMentir ->
             EntidadDeMentiraRow(entidadDeMentir)
         }
     }
 }
 
 @Composable
-fun EntidadDeMentiraRow(entidadDeMentira: EntidadDeMentira){
+fun EntidadDeMentiraRow(articulo: Articulo){
     Column(
         modifier = Modifier
             .fillMaxWidth()
             .padding(4.dp)
     ) {
         Text(
-            text = ""+entidadDeMentira.id,
+            text = ""+articulo.articuloId,
             style = MaterialTheme.typography.caption
         )
 
@@ -72,8 +72,8 @@ fun EntidadDeMentiraRow(entidadDeMentira: EntidadDeMentira){
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Text(text = ""+entidadDeMentira.string1)
-            Text(text = "Valor ${entidadDeMentira.double1}")
+            Text(text = ""+articulo.descripcion)
+            Text(text = "Valor ${articulo.existencia}")
         }
 
         Divider(
