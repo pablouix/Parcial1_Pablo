@@ -36,6 +36,12 @@ class ArticulosViewModel @Inject constructor(
         }
     }
 
+    fun Delete(articulo: Articulo){
+        viewModelScope.launch {
+            repositorio.delete(articulo)
+        }
+    }
+
 
 
 
