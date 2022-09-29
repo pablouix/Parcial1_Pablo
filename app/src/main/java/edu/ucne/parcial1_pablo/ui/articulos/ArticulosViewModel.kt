@@ -42,6 +42,15 @@ class ArticulosViewModel @Inject constructor(
         }
     }
 
+    fun find(id: Int){
+        viewModelScope.launch {
+            repositorio.getFind(id)
+            descripcion = descripcion
+        }
+    }
+
+
+
 
 
 

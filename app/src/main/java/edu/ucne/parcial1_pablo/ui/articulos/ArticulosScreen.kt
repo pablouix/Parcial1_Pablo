@@ -20,7 +20,8 @@ import androidx.hilt.navigation.compose.hiltViewModel
 @Composable
 fun ArticulosScreen(
     onNavigateBack: () -> Unit,
-    viewModel: ArticulosViewModel = hiltViewModel()
+    viewModel: ArticulosViewModel = hiltViewModel(),
+    articuloId: Int = 0,
 ){
 
     var errorDescripcion by remember {
