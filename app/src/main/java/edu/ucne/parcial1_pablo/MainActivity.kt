@@ -32,13 +32,13 @@ class MainActivity : ComponentActivity() {
 
                     NavHost(
                         navController = navController,
-                        startDestination = Screen.EntidadMentiraScreenList.route
+                        startDestination = Screen.ArticulosScreenList.route
                     ){
-                        composable(Screen.EntidadMentiraScreenList.route){
-                            ArticulosScreenList(onClick = { navController.navigate(Screen.EntidadMentiraScreen.route) })
+                        composable(Screen.ArticulosScreenList.route){
+                            ArticulosScreenList(onClick = { navController.navigate(Screen.ArticulosScreen.route) })
                         }
 
-                        composable(Screen.EntidadMentiraScreen.route){
+                        composable(Screen.ArticulosScreen.route){
                             ArticulosScreen({navController.navigateUp()})
                         }
 
