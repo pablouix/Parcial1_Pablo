@@ -3,10 +3,7 @@ package edu.ucne.parcial1_pablo.ui.articulos_list
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
-import androidx.compose.material.Button
-import androidx.compose.material.Divider
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -99,9 +96,23 @@ fun EntidadDeMentiraRow(articulo: Articulo, viewModel: ArticulosViewModel = hilt
                 Text(text = "Existencia: ${articulo.existencia}")
             }
 
-            Button(onClick = {viewModel.Delete(articulo)}) {
-                Text(text = "Eliminar")
+            Row() {
+                Button(
+                    onClick = {viewModel.Delete(articulo)}
+                ) {
+                    Text(text = "Eliminar")
+                }
+                Spacer(modifier = Modifier.padding(6.dp))
+
+                Button(
+                    onClick = {},
+                ) {
+                    Text(text = "Editar")
+                }
+
             }
+
+
 
         }
 
